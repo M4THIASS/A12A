@@ -1,30 +1,42 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-int f(int a)
+
+int f (int a)
 {
-    bool f=false;
-    int nr=0;
-    for(int d=2; d<=a/2; d++)
+    int n=a;
+    int d = 2, p;      
+    while(n > 1)
     {
-        if(a%d==0)
+        p = 0;
+        while(n % d == 0)
         {
-
-            for(int i=2; i<d; i++)
-            {
-                if(d%i==0)
-                    nr++;
-                if(nr==0)
-                    return d;
-            }
+            ++p;
+            n /= d;
         }
-
+        if(p)
+            return d;
+        ++ d;
     }
-    return 0;
 }
+
 int main()
 {
-    cout << f(45);
-
+    int x,y,v[10],k=1,n;
+    cin>>n;
+    while(n)
+    {
+        cin>>x;
+        if(f(x)==x)
+            v[k++]=x;
+            n--;
+    }
+    for(int i=1;i<k-1;i++)
+        for(int j=i+1;j<k;j++)
+        if(v[i]>v[j])
+        swap(v[i],v[j]);
+        
+    for(int i=1;i<k;i++)
+    cout<<v[i]<<" ";
     return 0;
 }
