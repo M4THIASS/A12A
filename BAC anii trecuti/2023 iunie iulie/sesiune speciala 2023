@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+void Putere (int n, int &x, int &p)
+{
+    bool ok=true;
+    while(ok)
+    {
+        if(pow(x,p)==n)
+            ok=false;
+        else
+        {
+            if(pow(x,p)<n)
+                p++;
+            else
+            {
+                p=1;
+                x++;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int n=216,x=2,p=1;
+    Putere(n,x,p);
+    cout<<x<<" "<<p;
+    return 0;
+}
