@@ -2,4 +2,25 @@ SUBIECTUL 1
 1. D
 2. A. 3
    B. 3 1
+SUBIECTUL 2
+1. b
+2. a
+3.  1 si 2
+4.  300
+5.     int a[10][10],m,n;
+    cin>>m>>n;
+    for(int i=1;i<=m;i++)
+        for(int j=1;j<=n;j++)
+        if(i==1)
+        a[i][j]=j;
+    else if(j==1)
+        a[i][j]=i;
+    else a[i][j]=a[i][j-1]+a[i-1][j];
+    for(int i=1;i<=m;i++, cout<<endl)
+        for(int j=1;j<=n;j++)
+            cout<<a[i][j]<<" ";
+SUBIEVCTUL 3
+1 D
+2 9
+
 
