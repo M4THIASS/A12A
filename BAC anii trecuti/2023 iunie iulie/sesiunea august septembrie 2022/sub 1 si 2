@@ -1,0 +1,16 @@
+SUB 1
+1.B 
+2.A
+3.D
+4.C
+5.B
+
+SUB 2
+1. 45
+2. 11 12
+2. 8 2
+3.  if(x.temperatura>11)
+cout<<"CALDUROS";
+else if(x.temperatura<10)
+cout<<"RACOROS";
+else cout<<"NORMAL";
