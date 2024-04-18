@@ -1,0 +1,48 @@
+// 1. C
+// 2. 3 2
+
+void p(unsigned n, int x[])
+{
+    int mini=99999, maxi=0, sum=0;
+    for(int i=0;i<n;i++)
+    {
+        if(mini>x[i])
+        mini=x[i];
+        if(maxi<x[i])
+        maxi=x[i];
+        sum+=x[i];
+    }
+    cout<<mini<<" "<<maxi<<" "<<sum;
+    
+}
+
+int main()
+{
+    int v[5]={1,9,4,8,5}, maxi=0,mini=9999,sum=0,n=5;
+    float media;
+    p(n,v,maxi,mini,sum);
+    for(int i=0;i<n;i++)
+        {if(v[i]==mini)
+        for(int j=i;j<n;j++)
+            v[j]=v[j+1];
+            n--;
+            break;
+        }
+        
+    for(int i=0;i<n;i++)
+        {if(v[i]==maxi)
+        for(int j=i;j<n;j++)
+            v[j]=v[j+1];
+            n--;
+            break;
+        }
+        
+        sum=0;
+    p(n,v,maxi,mini,sum);
+    media=sum/n;
+    cout<<fixed<<setprecision(3)<<media;    
+
+    return 0;
+}
+
+
