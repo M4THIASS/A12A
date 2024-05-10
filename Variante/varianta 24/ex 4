@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+    ifstream f("date.in");
+    int n,a,b,x,v[30000];
+    f>>n;
+    for(int i=1;i<=n;i++)
+        f>>v[i];
+    f>>a>>b;
+    for(int i=1;i<=n;i++)
+        if(v[i]>a)
+        {
+            cout<<v[i];
+            break;
+        }
+
+    return 0;
+}
